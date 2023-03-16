@@ -1,0 +1,20 @@
+CREATE TABLE perfumes (id INTEGER PRIMARY KEY, name TEXT, ml INTEGER, stock INTEGER, rating INTEGER, sold_last_week INTEGER);
+
+INSERT INTO perfumes VALUES (1, "jasmine", 40, 100, 4, 56);
+INSERT INTO perfumes VALUES (2, "roses", 30, 300, 3, 33);
+INSERT INTO perfumes VALUES (3, "peach", 40, 400, 4.5, 260);
+INSERT INTO perfumes VALUES (4, "applejuice", 30, 650, 5, 580);
+INSERT INTO perfumes VALUES (5, "mauve", 90, 300, 4.9, 390);
+INSERT INTO perfumes VALUES (6, "cloud", 90, 100, 2.5, 30);
+INSERT INTO perfumes VALUES (7, "lavender", 30, 250, 2, 200);
+INSERT INTO perfumes VALUES (8, "mist", 100, 300, 3.5, 160);
+INSERT INTO perfumes VALUES (9, "bubbles", 30, 260, 4.5, 260);
+INSERT INTO perfumes VALUES (10, "watermelon", 100, 100, 5, 60);
+INSERT INTO perfumes VALUES (11, "lemon", 30, 300, 5, 240);
+INSERT INTO perfumes VALUES (12, "roses", 90, 200, 3, 50);
+INSERT INTO perfumes VALUES (13, "golden", 90, 200, 4, 190);
+INSERT INTO perfumes VALUES (14, "garden", 30, 500, 4.6, 200);
+INSERT INTO perfumes VALUES (15, "hibiscus", 90, 1000, 4.8, 700);
+SELECT * FROM perfumes;
+
+SELECT * FROM perfumes ORDER BY rating
