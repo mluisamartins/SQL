@@ -1,0 +1,65 @@
+CREATE TABLE exes (id INTEGER PRIMARY KEY, fullname TEXT, year INTEGER);
+
+INSERT INTO exes VALUES (1, "Brandon Borello", null);
+INSERT INTO exes VALUES (2, "Jordan Alford", null);
+INSERT INTO exes VALUES (3, "Drew Hardwick", null);
+INSERT INTO exes VALUES (4, "Sam Armstrong", null);
+INSERT INTO exes VALUES (5, "Joe Jonas", 2008);
+INSERT INTO exes VALUES (6, "Lucas Till", 2009);
+INSERT INTO exes VALUES (7, "Taylor Lautner", 2009);
+INSERT INTO exes VALUES (8, "John Mayer", 2009);
+INSERT INTO exes VALUES (9, "Cory Monteith", 2010);
+INSERT INTO exes VALUES (10, "Jake Gyllenhaal", 2010);
+INSERT INTO exes VALUES (11, "Conor Kennedy", 2012);
+INSERT INTO exes VALUES (12, "Harry Styles", 2012);
+INSERT INTO exes VALUES (13, "Calvin Harris", 2015);
+INSERT INTO exes VALUES (14, "Tom Hiddleston", 2016);
+INSERT INTO exes VALUES (15, "Joe Alwyn", 2017);
+
+CREATE TABLE songs (id INTEGER PRIMARY KEY, song_title TEXT, ex_id INTEGER);
+
+INSERT INTO songs VALUES (1, "Tim McGraw", 1);
+INSERT INTO songs VALUES (2, "Picture to Burn", 2);
+INSERT INTO songs VALUES (3, "Teardrops on My Guitar", 3);
+INSERT INTO songs VALUES (4, "Should've Said No", 4);
+INSERT INTO songs VALUES (5, "Forever & Always", 5);
+INSERT INTO songs VALUES (6, "Last Kiss", 5);
+INSERT INTO songs VALUES (7, "Better Than Revenge", 5);
+INSERT INTO songs VALUES (8, "Mr. Perfectly Fine", 5);
+INSERT INTO songs VALUES (9, "Holy Ground", 5);
+INSERT INTO songs VALUES (10, "You Belong with Me", 6);
+INSERT INTO songs VALUES (11, "Back to December", 7);
+INSERT INTO songs VALUES (12, "Dear John", 8);
+INSERT INTO songs VALUES (13, "Ours", 8);
+INSERT INTO songs VALUES (14, "Superman", 8);
+INSERT INTO songs VALUES (15, "The Story of Us", 8);
+INSERT INTO songs VALUES (16, "I Knew You Were Trouble", 8);
+INSERT INTO songs VALUES (17, "Would’ve, Could’ve, Should’ve", 8);
+INSERT INTO songs VALUES (18, "Mine", 9);
+INSERT INTO songs VALUES (19, "We Are Never Ever Getting Back Together", 10);
+INSERT INTO songs VALUES (20, "State of Grace", 10);
+INSERT INTO songs VALUES (21, "I Almost Do", 10);
+INSERT INTO songs VALUES (22, "All Too Well", 10);
+INSERT INTO songs VALUES (23, "The Moment I Knew", 10);
+INSERT INTO songs VALUES (24, "Better Man", 10);
+INSERT INTO songs VALUES (25, "Babe", 10);
+INSERT INTO songs VALUES (26, "I Bet You Think About Me", 10);
+INSERT INTO songs VALUES (27, "Begin Again", 11);
+INSERT INTO songs VALUES (28, "Starlight", 11);
+INSERT INTO songs VALUES (29, "Out of the Woods", 12);
+INSERT INTO songs VALUES (30, "I Know Places", 12);
+INSERT INTO songs VALUES (31, "Clean", 12);
+INSERT INTO songs VALUES (32, "Style", 12);
+INSERT INTO songs VALUES (33, "Question…?", 12);
+INSERT INTO songs VALUES (34, "Wonderland", 12);
+INSERT INTO songs VALUES (35, "I Did Something Bad", 13);
+INSERT INTO songs VALUES (36, "Getaway Car", 13);
+INSERT INTO songs VALUES (37, "Bejeweled", 13);
+INSERT INTO songs VALUES (38, "Midnight Rain", 14);
+INSERT INTO songs VALUES (39, "Paper Ring", 15);
+INSERT INTO songs VALUES (40, "Invisible String", 15);
+
+SELECT fullname, song_title FROM songs
+JOIN exes
+ON songs.ex_id = exes.id;
+
