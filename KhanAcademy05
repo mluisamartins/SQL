@@ -1,0 +1,23 @@
+CREATE TABLE top_tracks (id INTEGER PRIMARY KEY, title TEXT, artist TEXT, scrobbles REAL);
+
+INSERT INTO top_tracks VALUES (1, "Feliz, Alegre e Forte", "Marisa Monte", 9);
+INSERT INTO top_tracks VALUES (2, "A Língua dos Animais", "Marisa Monte", 7);
+INSERT INTO top_tracks VALUES (3, "Rare", "Selena Gomez", 6);
+INSERT INTO top_tracks VALUES (4, "tolerate it", "Taylor Swift", 5);
+INSERT INTO top_tracks VALUES (5, "'tis the damn season", "Taylor Swift", 4);
+INSERT INTO top_tracks VALUES (6, "Would've, Could've, Should've", "Taylor Swift", 4);
+INSERT INTO top_tracks VALUES (7, "Nunca Es Sufiente", "LA Azules", 3);
+INSERT INTO top_tracks VALUES (8, "august", "Taylor Swift", 3);
+
+SELECT * FROM top_tracks;
+
+UPDATE top_tracks SET scrobbles = 10 WHERE id = 1;
+
+UPDATE top_tracks SET scrobbles = 7 WHERE id = 3;
+
+SELECT * FROM top_tracks;
+
+DELETE FROM top_tracks WHERE id = 7;
+
+SELECT * FROM top_tracks;
+
